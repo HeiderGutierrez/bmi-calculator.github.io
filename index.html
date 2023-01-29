@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <p>Gender</p>
+            <div class="actions">
+                <button>
+                    <em class="fa-solid fa-mars"></em>
+                    Male
+                </button>
+                <button>
+                    <em class="fa-solid fa-venus"></em>
+                    Famale
+                </button>
+            </div>
+        </div>
+        <div class="body">
+            <p class="range-title">weight</p>
+            <div class="row">
+                <input 
+                type="range" 
+                id="weight" 
+                min="20" 
+                max="200" 
+                value="20"
+                oninput="calculate()">
+                <span id="weight-val" class="range-slider__value">20 kg</span>
+            </div>
+            <P class="range-title">height</P>
+            <div class="row">
+                <input 
+                type="range" 
+                id="height" 
+                min="100" 
+                max="250" 
+                value="100"
+                oninput="calculate()">
+                <span id="height-val" class="range-slider__value">100 cm</span>
+            </div>
+        </div>
+        <div class="footer">
+            <p id="result" class="result">20.0</p>
+            <p id="category" class="category">Normal weight</p>
+        </div>
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 300px; width: 200%;"><path d="M0.00,49.98 C259.87,188.98 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #F5F5FA;"></path></svg>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
